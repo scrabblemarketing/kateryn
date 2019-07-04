@@ -1,0 +1,316 @@
+html {
+    box-sizing: border-box;
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: 'Overpass', sans-serif;
+    background-color: #fff;
+}
+
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes aparicion-corta {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.aparicion {
+    animation-name: aparicion;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.desaparicion {
+    animation-name: aparicion;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.aparicion-corta {
+    animation-name: aparicion-corta;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: .4s;
+}
+a {
+    text-decoration: none!important;
+}
+
+:root{
+    --color-principal:rgb(122,176,191);
+    --color-secundario: rgb(94,121,163);
+    --color-variante:rgb(66, 210, 230);
+}
+
+.bg-principal{
+    background-color: var(--color-principal);
+}
+.bg-secundario{
+    background-color: var(--color-secundario);
+}
+
+.barra ul li a{
+    color:#fff;
+    font-size: 1.4rem;
+}
+
+.menu-logo{
+    background-color: #fff;
+}
+
+#menu-header ul li a{
+    font-size: 1.4rem;
+    color:var(--color-secundario);
+    transition: all .4s ease;
+}
+#menu-header ul li a:hover{
+    background-color: var(--color-principal);
+    color:#fff;
+}
+#menu-header ul{
+    border-top: 1px solid var(--color-secundario);
+    padding-top:5px;
+}
+
+
+.main-footer{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7ab0bf+0,5e79a3+100 */
+background: #7ab0bf; /* Old browsers */
+background: -moz-linear-gradient(top,  #7ab0bf 0%, #5e79a3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7ab0bf 0%,#5e79a3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7ab0bf 0%,#5e79a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', endColorstr='#5e79a3',GradientType=0 ); /* IE6-9 */
+    padding: 1.5rem 0 0;
+}
+
+.main-footer h4{
+    color:#fff;
+    font-weight: bold;
+    margin-bottom:15px;
+}
+.main-footer div p, .main-footer div label{
+    color:#fff;
+    font-size: .9rem;
+}
+.main-footer div p:first-of-type{
+    margin-top:3rem;
+}
+.redes-footer{
+    margin-top:20px;
+    background-color: #3f5986;
+    padding: 5px 0;
+}
+.redes-footer li a{
+    font-size: 1.5rem;
+    color:#fff;
+    padding-bottom:0;
+    transition: all .4s ease;
+    border-radius: 6px;
+}
+.redes-footer li a:hover{
+    color:#3f5986;
+    background-color: #fff;
+}
+.footer-derechos{
+    margin:0;
+    padding: 15px;
+    background-color: #2b4063;
+    color:#fff;
+
+}
+.footer-derechos a{
+    color:#fff;
+    transition: all .4s ease;
+}
+.footer-derechos a:hover{
+    text-decoration: underline!important;
+}
+
+.contacto-footer input, .contacto-footer textarea{
+    font-size: .95rem;
+    padding: 5px 8px;
+    border: 1px solid var(--color-variante);
+}
+.contacto-footer input:focus, .contacto-footer textarea:focus{
+    outline: 0;
+    
+    box-shadow: none;
+}
+.contacto-footer textarea{
+    resize: none;
+    height: 110px;
+}
+
+.categorias .row .col-md-4 img{
+    display:block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 150px;
+}
+.bg-white{
+    width: 180px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px auto;
+    box-shadow: 1px 2px 4px 4px rgba(0,0,0,.1);
+}
+.categorias .row .col-md-4{
+    padding: 5rem 1rem;
+    background-color: var(--color-variante);
+}
+.categorias .row .col-md-4:nth-last-of-type(odd){
+    background-color: rgb(71, 191, 224);
+}
+
+.categorias .row .col-md-4 h2{
+    text-align: center;
+    margin-top:1rem;
+    color:#fff;
+}
+
+.categorias .row .col-md-4 h2 a{
+    color:#fff;
+}
+
+.primera-seccion{
+    border-bottom: 2px solid rgb(219, 219, 219,.3);
+    padding-bottom: 2rem;
+}
+
+.primera-seccion .row .col-md-3{
+    padding: 50px 1.5rem;
+}
+.primera-seccion .row .col-md-3 img{
+    display:block;
+    margin:0 auto;
+    max-width: 350px;
+}
+.primera-seccion .row .col-md-3:nth-of-type(3){
+    padding:1rem;
+    border-top: 2px solid var(--color-secundario);
+}
+
+.primera-seccion .row .col-md-3:nth-of-type(2){
+    border-top: 2px solid var(--color-principal);
+}
+
+.primera-seccion .row .col-md-3:nth-of-type(4){
+    border-top: 2px solid var(--color-variante)
+}
+
+@media (min-width:768px){
+    .primera-seccion .row .col-md-3{
+        padding: 110px 1.5rem;
+        
+    }
+    
+    .primera-seccion .row .col-md-3:nth-of-type(3){
+        padding:1rem;
+        border-left: 2px solid var(--color-secundario);
+        border-top:none;
+    }
+    
+    .primera-seccion .row .col-md-3:nth-of-type(2){
+        border-left: 2px solid var(--color-principal);
+        border-top:none;
+    }
+    
+    .primera-seccion .row .col-md-3:nth-of-type(4){
+        border-left: 2px solid var(--color-variante);
+        border-top:none;
+    }
+}
+
+
+.muestra-tratamientos{
+    margin: 7rem auto;
+    background-image: url('../img/consultorio.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.muestra-tratamientos .bg-secundario{
+    background-color: rgb(43, 64, 99,.8);
+    padding: 2rem 0;
+}
+.muestra-tratamientos .container{
+    max-width: 1500px;
+}
+.muestra-tratamientos h2{
+    color:#fff;
+}
+.muestra-tratamientos .owl-carousel .item h4, .muestra-tratamientos .owl-carousel .item p{
+    color:#fff;
+}
+.muestra-tratamientos .owl-carousel .item img{
+    border-radius: 50%;
+}
+
+.imagen-pre{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.doctora{
+    background-image: url('../img/background-1.png');
+    background-position: center center;
+    background-size: cover;
+}
+.doctora .col-md-7 img{
+    display:block;
+    margin:0 auto;
+}
+
+@media (max-width:480px){
+    .doctora .col-md-7 img{
+        max-width: 250px;
+    }
+}
+
+.sec-doc{
+    margin: 80px auto;
+}
+.sec-doc h3{
+    margin-bottom: 1.6rem;
+}
+.sec-doc ul li a{
+    color:#fff;
+    font-size: 1.3rem;
+}
+.sec-doc ul li a:hover{
+    text-decoration: underline!important;
+}
