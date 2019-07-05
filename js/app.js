@@ -133,7 +133,24 @@ $(document).ready(function() {
         mouseDrag: true,
         autoplay: true
     })
-    
+    var owl = $('.promo-carousel.owl-carousel');
+    owl.owlCarousel({
+        margin: 2,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1500: {
+                items: 3
+            }
+        },
+        mouseDrag: true,
+        autoplay: true
+    })
    
 
 })

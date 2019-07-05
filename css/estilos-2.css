@@ -314,3 +314,85 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', end
 .sec-doc ul li a:hover{
     text-decoration: underline!important;
 }
+
+.promocion-principal{
+    background-image:url('../img/background-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    padding: 35px
+}
+.promocion-principal h2{
+    text-align: center;
+    font-size: 2.4rem;
+    color:#fff;
+    margin: 0 auto 20px;
+}
+.promocion-principal .col-md-4{
+    margin: 0 auto 15px;
+}
+.card-promo{
+    border: 2px solid #fff;
+    background-color:#fff;
+}
+
+.card-promo img{
+    display:block;
+    width:250px;
+    margin: 0 auto;
+}
+@media (min-width:768px){
+    .card-promo img{
+        width:100%;
+    }
+}
+.card-promo-body{
+    padding: 20px 0;
+}
+.card-promo-body h4, .card-promo-body h5{
+    text-align: center;
+    font-size: 1.6rem;
+}
+.card-promo-body h4{
+    font-size: 2.6rem;
+    background-color: var(--color-variante);
+    color:#2b4063;
+    padding: 1rem;
+}
+
+
+.barra-consulta{
+    background-color: var(--color-variante);
+    padding: 2rem 0;
+}
+.barra-consulta h2{
+    margin-bottom: 25px;
+    color:#fff;
+    font-size: 2.4rem;
+}
+
+.btn-cita{
+    background-color: rgb(43, 64, 99);
+    border:1px solid rgb(43, 64, 99);
+    color:#fff;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: all .4s ease;
+}
+.btn-cita:hover{
+    background-color: transparent;
+    color: rgb(43, 64, 99)
+}
+.barra-consulta .btn-cita{
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
