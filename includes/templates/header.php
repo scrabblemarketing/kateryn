@@ -3,24 +3,14 @@
     $pagina = str_replace('.php','',$archivo);
 ?>
 
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138695170-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-138695170-1');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Centro Dermatológico de la Doctora Katherin Perez Willis, especializada en tratamientos para la piel como manchas, acné, melasma y demás. Tratamientos láser y estéticos.">
-    <title>Dra Kateryn</title>
+    <title>Dermaláser KPW</title>
     <?php include 'includes/icon.php' ?>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Gothic+A1:400,700|Dancing+Script|Oswald:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700" rel="stylesheet">
@@ -29,65 +19,60 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/estilos.css">
-</head> 
-<body class="<?php echo ($pagina == 'index') ? $pagina : '' ?>">
-
-    <header class="<?php echo ($pagina == 'index') ? 'inicio-header' : '' ?>">
+    <link rel="stylesheet" href="css/estilos-2.css">
+</head>
+<body class="pag-<?php echo $pagina ?>">
     
-        <div class="nav-principal container-fluid">
+    <header>
+        <div class="barra bg-principal">
+            <div class="row justify-content-end">
+                <div class="col-12 col-sm-6 col-md-4 pr-5">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a href="https://www.facebook.com/DermatologaKaterynPerezWillis" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="nav-item"><a href="https://www.instagram.com/dra.katerynperezwillis/" class="nav-link"><i class="fab fa-instagram"></i></a></li>
+                        <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=51989121842&text=Deseo%20reservar%20una%20cita" class="nav-link"><i class="fab fa-whatsapp"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu-logo container-fluid">
             <div class="row">
-                <div class="col-8 col-md-4">
+                <div class="col-8 col-md-3">
                     <a href="index.php">
                             <img src="img/logo.png" class="img-fluid" alt="Logo de Katherin Perez Willis">
                     </a>
-                    
                 </div>
-                <div class="col-4 col-md-8">
-                    <nav class="navbar navbar-expand-lg navbar-light align-middle h-100">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="col-4 col-md-9">
+                    <nav class="navbar navbar-expand-lg navbar-light mt-5">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-header" aria-controls="menu-header" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="navbar-collapse collapse menu-principal" id="nav-principal">
-                            <ul class="navbar-nav mr-auto w-100 justify-content-center nav-fill">
+                        <div class="collapse navbar-collapse" id="menu-header">
+                            <ul class="navbar-nav w-100 mr-auto justify-content-center nav-fill">
                                 <li class="nav-item">
-                                    <a href="nosotros.php" class="text-right text-md-center nav-link">Nosotros</a>
+                                    <a href="index.php" class="nav-link">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="tratamiento.php" class="text-right text-md-center nav-link">Tratamientos</a>
+                                    <a href="nosotros.php" class="nav-link">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.php?title=tecnologia" class="text-right text-md-center nav-link">Tecnología</a>
+                                    <a href="tratamiento.php" class="nav-link">Tratamientos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contacto.php" class="text-right text-md-center nav-link">Contacto</a>
+                                    <a href="promociones.php" class="nav-link">Promociones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="blog.php" class="nav-link">Tecnologías</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contacto.php" class="nav-link">Contacto</a>
                                 </li>
                             </ul>
+
                         </div>
+                        
                     </nav>
                 </div>
             </div>
-            <div id="carouselPrincipal" class="carousel slide <?php echo ($pagina !== 'index') ? 'd-none' : '' ?>" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div></div>
-                        <!-- <img src="img/principal1.jpeg" class="d-block img-fluid" alt="Imagen principal de la Doctora Katherin Perez Willis"> -->
-                    </div>
-                    <div class="carousel-item">
-                        <div></div>
-                        <!-- <img src="img/principal2.jpg" class="d-block w-100" alt="Imagen principal de la Doctora Katherin Perez Willis"> -->
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselPrincipal" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselPrincipal" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            
         </div>
-
     </header>
