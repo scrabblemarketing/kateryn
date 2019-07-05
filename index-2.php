@@ -160,7 +160,7 @@
                     <div class="item px-2">
                         <div class="row">
                             <div class="col-md-4">
-                               <div class="imagen-pre" style="background-image:url('img/tratamientos/prp muestra.jpeg')"></div>
+                               <div class="imagen-pre" style="background-image:url('img/tratamientos/acido muestra.jpg')"></div>
                             </div>
                             <div class="col-md-8">
                                 <h4>Acido</h4>
@@ -171,7 +171,7 @@
                     <div class="item px-2">
                         <div class="row">
                             <div class="col-md-4">
-                               <div class="imagen-pre" style="background-image:url('img/tratamientos/prp muestra.jpeg')"></div>
+                               <div class="imagen-pre" style="background-image:url('img/tratamientos/Lentigos solares 275X324.jpg')"></div>
                             </div>
                             <div class="col-md-8">
                                 <h4>Laser CO2</h4>
@@ -182,7 +182,7 @@
                     <div class="item px-2">
                         <div class="row">
                             <div class="col-md-4">
-                               <div class="imagen-pre" style="background-image:url('img/tratamientos/prp muestra.jpeg')"></div>
+                               <div class="imagen-pre" style="background-image:url('img/tratamientos/botox-muestra.jpeg')"></div>
                             </div>
                             <div class="col-md-8">
                                 <h4>Toxina</h4>
