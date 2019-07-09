@@ -1,7 +1,7 @@
 <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <?php if($pagina == 'contacto'):?>
+                <?php if($pagina == 'contacto' || isset($_GET['title'])):?>
                 <div class="col-md-4">
                     <h4>Nuestra información</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Avenida del Pinar 152 Piso 5 en Surco</p>

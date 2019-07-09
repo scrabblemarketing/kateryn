@@ -78,9 +78,11 @@
 
     ?>
     <div class="bg-tratamiento parallax container-fluid">
-        <div class="bg-negro">
-        <h1>Tratamientos</h1>
+        <div class="bg-negro"></div>
+        <div class="titulo-line">
+            <h1>Tratamientos</h1>
         </div>
+        
     </div>
     <div class="tratamientos container my-5 py-5">
         <div class="row justify-content-center">

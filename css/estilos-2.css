@@ -26,6 +26,17 @@ body {
     }
 }
 
+@keyframes borde-bottom {
+    0% {
+        border-bottom: none;
+        width:0;
+    }
+    100% {
+        border-bottom:2px solid var(--color-variante);
+        width:100%;
+    }
+}
+
 @keyframes aparicion-corta {
     0% {
         opacity: 0;
@@ -463,11 +474,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', end
 .bg-tratamiento{
     background-image:url('../img/tratamientos-bg.jpg');
     position:relative;
-    height:60vh;
+    height:25vh;
     padding:0;
 }
 .bg-negro{
     background-color:#000;
-    height:100%;
-    opacity:.6;
+    height:25vh;
+    opacity:.5;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.bg-tratamiento .titulo-line{
+    position:absolute;
+    width:100%;
+    top:35%;
+    color:var(--color-variante);
+    transition:all .4s ease;
+}
+.bg-tratamiento .titulo-line h1{
+    font-size:2rem;
+    display:inline;
+    text-align:center;
+    margin-left:20%;
+    text-transform:uppercase;
+}
+.bg-tratamiento .titulo-line h1:hover{
+    animation-name:borde-bottom;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@media (min-width:768px){
+    .bg-negro{
+        height:60vh;
+    }
+    .bg-tratamiento{
+        height:60vh;
+    }
+    .bg-tratamiento .titulo-line{
+        top:30%;
+        color:var(--color-variante);
+    }
+    .bg-tratamiento .titulo-line h1{
+        font-size:6rem;
+        margin-left:30%;
+    }
+    
 }
