@@ -155,6 +155,73 @@ $(document).ready(function() {
 
 })
 
+/******* Tratamientos **********/
+
+
+//Mismo tamaño
+const categorias = document.querySelectorAll('.categoria');
+const menuCategorias = document.querySelectorAll('.men-cat');
+console.log(categorias);
+$('.men-cat:first').addClass('activo')
+menuCategorias.forEach(boton => {
+    boton.addEventListener('click', function(){
+        $('.men-cat').removeClass('activo')
+        let id = boton.getAttribute('href');
+        this.classList.add('activo')
+        id = id.replace('#',''); 
+        categorias.forEach(categoria => {
+            if(categoria.getAttribute('id') == id){
+                medirCajas(categoria);
+            }
+        })
+    })
+})
+
+
+
+
+function medirCajas(categoria){
+        categorias.forEach(cat => {
+            cat.style.display='block';
+            
+        })
+    
+        let maxHeightCard =0; 
+        
+        const cartas = categoria.querySelectorAll('.col-md-4 .card-body');
+
+        cartas.forEach(carta =>{
+            
+            if(carta.clientHeight > maxHeightCard){
+                
+                maxHeightCard = carta.clientHeight;
+                confirmarAltura(cartas,maxHeightCard);
+            }
+        categorias.forEach(cat => {
+            cat.style.display='none';
+            
+        })
+        categoria.style.display='block';
+    console.log(maxHeightCard);
+});
+}
+
+
+
+
+function confirmarAltura(arreglo,altura){
+
+    arreglo.forEach(valor =>{
+        if(valor.clientHeight < altura){
+            valor.style.height = altura + 'px';
+            valor.querySelector('h2').style.marginTop = '15px';
+        }
+    })
+}
+
+/***************************/
+
+
 
 /************* CORREO ***************** */
 

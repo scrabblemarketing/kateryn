@@ -72,23 +72,23 @@
     </header>
     
     <div class="sliders-principales">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="slidePrincipal" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="img/portada 1.jpg" class="d-block w-100" alt="">
+                <img src="img/portada 1.jpg" class="d-block w-100" alt="Portada de Dermlaser Kateryn Perez Willis">
                 </div>
                 <div class="carousel-item">
-                <img src="img/portada 2.jpg" class="d-block w-100" alt="...">
+                <img src="img/portada 2.jpg" class="d-block w-100" alt="Tratamientos láser conla doctora Kateryn Perez Willis">
                 </div>
                 <div class="carousel-item">
-                <img src="img/portada 3.jpg" class="d-block w-100" alt="...">
+                <img src="img/portada 3.jpg" class="d-block w-100" alt="Tratamientos dermatológicos con la doctora Kateryn Perez Willis">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#slidePrincipal" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#slidePrincipal" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -145,19 +145,27 @@
         <div class="bg-secundario">
             <h2 class="text-center">Nuestros tratamientos</h2>
             <div class="container">
+                <?php require_once('includes/funciones/conexion.php');
+                    $sql = "SELECT nombre_tratamiento, contenido, url_imagen_secundario FROM tratamientos";
+                    $resultado = $conn->query($sql);
+
+
+                ?>
                 <div class="row py-5 owl-carousel">
+                    <?php while($tratamientos = $resultado->fetch_assoc()): ?>
                     <div class="item px-2">
                         <div class="row">
                             <div class="col-md-4">
-                               <div class="imagen-pre" style="background-image:url('img/tratamientos/prp muestra.jpeg')"></div>
+                               <div class="imagen-pre" style="background-image:url('img/tratamientos/<?php echo $tratamientos['url_imagen_secundario']?>')"></div>
                             </div>
                             <div class="col-md-8">
-                                <h4>Plasma Rico en Plaquetas</h4>
-                                <p class="text-justify">La bioestimulación con plasma rico en plaquetas (PRP) es un procedimiento autólogo, es decir, que se realiza con sangre extraída en forma indolora del mismo paciente.</p>
+                                <h4><?php echo $tratamientos['nombre_tratamiento']?></h4>
+                                <?php echo substr($tratamientos['contenido'], 0, 110) ?>...
                             </div>
                         </div>
                     </div>
-                    <div class="item px-2">
+                    <?php endwhile ?>
+                    <!-- <div class="item px-2">
                         <div class="row">
                             <div class="col-md-4">
                                <div class="imagen-pre" style="background-image:url('img/tratamientos/acido muestra.jpg')"></div>
@@ -189,7 +197,7 @@
                                 <p class="text-justify">La bioestimulación con plasma rico en plaquetas (PRP) es un procedimiento autólogo, es decir, que se realiza con sangre extraída en forma indolora del mismo paciente.</p>
                             </div>
                         </div>
-                    </div> 
+                    </div>  -->
                 </div>
             </div>
 
