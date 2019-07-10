@@ -7,40 +7,31 @@
                 
                 
                 
-                <section class="promocion-principal my-4">
+<section class="promocion-principal my-4">
+<?php
+    
+    $sql = "SELECT * FROM promociones";
+    $respuesta = $conn->query($sql);
 
-<div class="container">
-    <h2>Promociones</h2>
-    <div class="promo-carousel owl-carousel">
-        <div class="item">
-            <div class="card-promo">
-                <img src="img/tratamientos/limpieza muestra.jpg" alt="" class="img-fluid">
-                <div class="card-promo-body">
-                    <h5>Limpieza Facial OXYCRYO</h5>
-                    <h4>S/. 250</h4>
+
+?>
+    <div class="container">
+        <h2>Promociones</h2>
+        <div class="promo-carousel owl-carousel">
+        <?php while($promo = $respuesta->fetch_assoc()): ?>
+            <div class="item">
+                <div class="card-promo">
+                    <img src="img/tratamientos/<?php echo $promo['imagen_promo'] ?>" alt="" class="img-fluid">
+                    <div class="card-promo-body">
+                        <h5><?php echo $promo['titulo_promo'] ?></h5>
+                        <h4>S/. <?php echo $promo['precio'] ?></h4>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="card-promo">
-                <img src="img/tratamientos/hollywood peel 275X324.jpg" alt="" class="img-fluid">
-                <div class="card-promo-body">
-                    <h5>Láser Spectra</h5>
-                    <h4>S/. 330</h4>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="card-promo">
-                <img src="img/tratamientos/lifting face 4d 275X324.jpg" alt="" class="img-fluid">
-                <div class="card-promo-body">
-                    <h5>Tensado Facial</h5>
-                    <h4>S/. 1000</h4>
-                </div>
-            </div>
+            <?php endwhile ?>
+            
         </div>
     </div>
-</div>
 </section>
 
                 

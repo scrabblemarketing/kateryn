@@ -63,19 +63,6 @@
             </li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-book"></i> <span>Promociones</span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="lista-productos.php">
-              <i class="fa fa-list-ul"></i> Ver todos</a>
-            </li>
-            <li><a href="crear-producto.php">
-              <i class="fa fa-plus-circle"></i> Agregar</a>
-            </li>
-          </ul>
-        </li>
         
         <li class="treeview">
           <a href="#">
@@ -90,7 +77,19 @@
             </li>
           </ul>
         </li>
-     
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-address-card"></i> <span>Promociones</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="lista-promociones.php">
+              <i class="fa fa-list-ul"></i> Ver todos</a>
+            </li>
+            <li><a href="crear-promocion.php">
+              <i class="fa fa-plus-circle"></i> Crear promoción</a>
+            </li>
+          </ul>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-address-card"></i> <span>Clientes</span>

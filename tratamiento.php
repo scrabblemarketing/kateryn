@@ -42,24 +42,51 @@
     
                            
                 </section>
-                <aside class="col-md-4 animated fadeInRight">
+                <aside class="col-md-4 widget-tratamiento animated fadeInRight">
                     <h3 class="text-center text-uppercase">Solicita información</h3>
                     <form action="sendmail.php" id="form-contacto" class="consulta-form" method="post">
                         <div class="form-group">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombres y Apellidos">
+                            <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombres y Apellidos">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="telefono" name="telefono" placeholder="Celular">
+                            <input type="text" id="telefono" class="form-control" name="telefono" placeholder="Celular">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="email" name="email" placeholder="Email">
+                            <input type="text" id="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <textarea id="mensaje" name="mensaje" id="" cols="30" rows="10" placeholder="Consulta"></textarea>
+                            <textarea id="mensaje" class="form-control" name="mensaje" id="" cols="30" rows="10" placeholder="Consulta"></textarea>
                         </div>
-                        <input type="hidden" name="envio" id="envio" value="tratamiento">
+                        <input type="hidden" class="form-control" name="envio" id="envio" value="tratamiento">
                         <input type="submit" class="btn btn-primary btn-enviar d-block" value="Enviar">
                     </form>
+
+                    <h3 class="mt-3">Más Tratamientos</h3>
+                    <?php
+                        $categoria = $tratamiento['categoria'];
+                        
+                        $lq = "SELECT * FROM tratamientos WHERE categoria = $categoria";
+                       
+                        $resp = $conn->query($lq);
+
+
+                    ?>
+                    <div class="tratamientos-cat owl-carousel">
+                   
+                    <?php while($trts = $resp->fetch_assoc()): ?>
+                    
+                        <div class="item">
+                            <div class="card-cat">
+                                <img src="img/tratamientos/<?php echo $trts['url_imagen_secundario'] ?>" alt="" class="img-fluid">
+                                <div class="card-cat-body">
+                                    <h5><?php echo $trts['nombre_tratamiento'] ?></h5>
+                                    <a href="tratamiento.php?title=<?php echo $trts['id_tratamiento'] ?>" class="btn btn-cat">Conoce más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endwhile ?>
+                        
+                    </div>
                 </aside>
                 
             </div>
@@ -77,7 +104,7 @@
         
 
     ?>
-    <div class="bg-tratamiento parallax container-fluid">
+    <div class="bg-tratamiento barra-estilo parallax container-fluid">
         <div class="bg-negro"></div>
         <div class="titulo-line">
             <h1>Tratamientos</h1>

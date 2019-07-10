@@ -7,17 +7,18 @@ if (document.querySelector('#navTratamiento')) {
 
 
 
-    $('.tecnologias .card').hide()
-    $('.tecnologias .card:first').show()
-    $('.tecnologias .card:first').addClass('fadeInRight');
+    $('.tecnologias .carta-tec').hide()
+    $('.tecnologias .carta-tec:first').show()
+    $('.tecnologias .carta-tec:first').addClass('fadeInRight');
 
     menuTecno.addEventListener('click', (e) => {
         e.preventDefault();
         const link = e.target.getAttribute('href').split('#');
-        $('.tecnologias .card').hide()
-        $('.tecnologias .card').removeClass('fadeInRight');
-        $(`.tecnologias .card#${link[1]}`).show()
-        $(`.tecnologias .card#${link[1]}`).addClass('fadeInRight')
+        
+        $('.tecnologias .carta-tec').hide()
+        $('.tecnologias .carta-tec').removeClass('fadeInRight');
+        $(`.tecnologias .carta-tec#${link[1]}`).show()
+        $(`.tecnologias .carta-tec#${link[1]}`).addClass('fadeInRight')
     })
 
 
@@ -151,9 +152,28 @@ $(document).ready(function() {
         mouseDrag: true,
         autoplay: true
     })
+    
    
 
 })
+var owl = $('.tratamientos-cat.owl-carousel');
+    owl.owlCarousel({
+        margin: 2,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1500: {
+                items: 1
+            }
+        },
+        mouseDrag: true,
+        autoplay: true
+    })
 
 /******* Tratamientos **********/
 

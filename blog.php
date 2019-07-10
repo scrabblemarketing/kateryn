@@ -5,16 +5,26 @@
 ?>
 
 <?php if($_GET['title']== 'tecnologia'): ?>
+
+<div class="bg-laser barra-estilo parallax container-fluid">
+    <div class="bg-negro"></div>
+    <div class="titulo-line">
+            <h1>Tecnología</h1>
+        </div>
+</div>
+
+
+
 <div class="container my-5">
-    <div class="row">
-    <aside class="menu-tratamientos col-md-3 py-4">
+    <div class="row justify-content-center">
+    <aside class="menu-tratamientos col-12 py-4">
 
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTratamiento" aria-controls="navTratamiento" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navTratamiento">
-                <ul class="nav flex-column">
+                <ul class="nav nav-fill w-100">
                     <li class="nav-item">
                         <a href="#tecnologia1" class="nav-link">Deka Motus Depilación</a>
                     </li>
@@ -35,49 +45,71 @@
 
     
 
-    <section class="col-md-9 tecnologias">
-        <div class="card animated" id="tecnologia1">
-            <img src="img/blog/laser1.png" class="img-fluid" alt="" >
-            <div class="card-body">
-                <h2>Deka Motus Depilación</h2>
-                <p>El mercado de la depilación es extremadamente complejo. El gran número de marcas existentes que presentan sus productos producen una competición feroz. Cada clínica pretende ofrecer el mejor cuidado a sus pacientes, pero es complicado discernir entre las diferencias que ofrecen estos sistemas.</p>
-                
-                <p>Ventajas</p>
-                <ul>
-                    <li>La única longitud de onda que es efectiva en el tratamiento de vello fino y ligero. De hecho, ningún otro tipo de láser puede combinar una eficiente absorción de la melanina (a 755 nm), un alto pico de potencia (más de 6,000 W) y la posibilidad de seleccionar una longitud de pulso corta (hasta 2 ms).</li>
-<li>El cabezal Moveo permite que el vello no deseado sea eliminado por medio de un nuevo método que es más fácil, más rápido, más seguro y más efectivo (tratamiento indoloro, adecuado también para los tipos de piel más oscuros).</li>
-<li>Una tecnología innovadora que simplifica estructuralmente el centro del sistema láser, reduciendo costes y problemas de mantenimiento.</li>
-<li>Un sistema compacto y portátil.</li>
+    <section class="col-sm-6 col-md-9 tecnologias">
+        <div class="carta-tec animated" id="tecnologia1">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/blog/deka-motus.jpg" class="img-fluid" alt="Deka Motus Depilación">
+                </div>
+                <div class="col-md-7">
+                        <h2>Deka Motus Depilación</h2>
+                        <p>El mercado de la depilación es extremadamente complejo. El gran número de marcas existentes que presentan sus productos producen una competición feroz. Cada clínica pretende ofrecer el mejor cuidado a sus pacientes, pero es complicado discernir entre las diferencias que ofrecen estos sistemas.</p>
+                        
+                        <p>Ventajas</p>
+                        <ul>
+                            <li>La única longitud de onda que es efectiva en el tratamiento de vello fino y ligero. De hecho, ningún otro tipo de láser puede combinar una eficiente absorción de la melanina (a 755 nm), un alto pico de potencia (más de 6,000 W) y la posibilidad de seleccionar una longitud de pulso corta (hasta 2 ms).</li>
+                            <li>El cabezal Moveo permite que el vello no deseado sea eliminado por medio de un nuevo método que es más fácil, más rápido, más seguro y más efectivo (tratamiento indoloro, adecuado también para los tipos de piel más oscuros).</li>
+                            <li>Una tecnología innovadora que simplifica estructuralmente el centro del sistema láser, reduciendo costes y problemas de mantenimiento.</li>
+                            <li>Un sistema compacto y portátil.</li>
+                        </ul>
+                </div>
             </div>
         </div>
+        <!-- .carta-tec -->
+        <div class="carta-tec animated" id="tecnologia2">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/blog/laser-infini.jpg" class="img-fluid" alt="" >
+                </div>
+                <div class="col-md-7">
+                    <h2>INFINI</h2>
+                    <p>INFINI es una tecnología exclusiva que le permite controlar el procedimiento de rejuvenecimiento de la piel. Usted controla la profundidad del tratamiento y los niveles de energía para adoptar un enfoque en varias capas que permite personalizar los tratamientos, independientemente del tipo o el color de la piel. Ahora puede ofrecer la mejor solución, que logrará que los pacientes vuelven y lo recomienden a nuevos pacientes.</p>
+            
+                </div>
+            </div>
+        </div>
+        <!-- .carta-tec -->
+        <div class="carta-tec animated" id="tecnologia3">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/blog/laser-co2.jpg" class="img-fluid" alt="Láser CO2 Fraccionado">
+                </div>
+                <div class="col-md-7">
+                    <h2>Láser CO2 Fraccionado</h2>
+                    <p>El láser fraccionado de CO2 emite minúsculos haces de luz que penetran en la piel hasta la dermis en forma de cientos de columnas térmicas. Estas columnas son pequeñas heridas microscópicas que quedan rodeadas de tejido sano, que es el tejido que contiene los queratinocitos, las células capaces de promover un rápida cicatrización y una alta producción de colágeno.
+                    <p>Antes de empezar con el tratamiento con el láser fraccionado de CO2 es indispensable una valoración médica para determinar si es necesaria una preparación previa de la piel con productos tópicos específicos</p>
+            
+                </div>
+            </div>
+        </div>
+        <!-- .carta-tec -->
 
-        <div class="card animated" id="tecnologia2">
-            <img src="img/blog/laser2.png" class="img-fluid" alt="" >
-            <div class="card-body">
-                <h2>INFINI</h2>
-               <p>INFINI es una tecnología exclusiva que le permite controlar el procedimiento de rejuvenecimiento de la piel. Usted controla la profundidad del tratamiento y los niveles de energía para adoptar un enfoque en varias capas que permite personalizar los tratamientos, independientemente del tipo o el color de la piel. Ahora puede ofrecer la mejor solución, que logrará que los pacientes vuelven y lo recomienden a nuevos pacientes.</p>
+        <div class="carta-tec animated" id="tecnologia4">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/blog/laser-spectra.jpg" class="img-fluid" alt="SPECTRA">
+                </div>
+                <div class="col-md-7">
+                    <h2>SPECTRA</h2>
+                    <p>El láser SPECTRA™ está diseñado para atender las crecientes demandas de las clínicas, e incluye distintas y eficaces opciones de tratamiento, parámetros personalizables, seguridad integrada y tiempos de recuperación reducidos al mínimos a un precio asequible.</p>
+                    <p>Con nuestras cuatro longitudes de onda diferentes (1064 nm, 532 nm, 585 nm, 650 nm) en modo de conmutación Q, el sólido sistema Spectra cuenta con la versatilidad para proporcionar a su consultorio una amplia gama de opciones clínicas para tratar a sus pacientes. Lutronic expande continuamente sus aplicaciones de tratamientos, y el sistema Spectra es el primer láser Nd:YAG con conmutación Q adecuado para el tratamiento de melasma. El sistema Spectra con tecnología avanzada ofrece una ventaja en comparación con otros sistemas de láser y proporciona resultados clínicos mejorados.</p>
+                </div>
             </div>
         </div>
+        <!-- .carta-tec -->
+      
 
-        <div class="card animated" id="tecnologia3">
-            <img src="img/blog/laser4.png" class="img-fluid" alt="">
-            <div class="card-body">
-                <h2>Láser CO2 Fraccionado</h2>
-                <p>El láser fraccionado de CO2 emite minúsculos haces de luz que penetran en la piel hasta la dermis en forma de cientos de columnas térmicas. Estas columnas son pequeñas heridas microscópicas que quedan rodeadas de tejido sano, que es el tejido que contiene los queratinocitos, las células capaces de promover un rápida cicatrización y una alta producción de colágeno.
-<p>
-Antes de empezar con el tratamiento con el láser fraccionado de CO2 es indispensable una valoración médica para determinar si es necesaria una preparación previa de la piel con productos tópicos específicos</p>
-                
-            </div>
-        </div>
-
-        <div class="card animated" id="tecnologia4">
-            <img src="img/blog/laser3.png" class="img-fluid" alt="">
-            <div class="card-body">
-                <h2>Spectra </h2>
-                <p>El láser SPECTRA™ está diseñado para atender las crecientes demandas de las clínicas, e incluye distintas y eficaces opciones de tratamiento, parámetros personalizables, seguridad integrada y tiempos de recuperación reducidos al mínimos a un precio asequible.</p>
-                <p>Con nuestras cuatro longitudes de onda diferentes (1064 nm, 532 nm, 585 nm, 650 nm) en modo de conmutación Q, el sólido sistema Spectra cuenta con la versatilidad para proporcionar a su consultorio una amplia gama de opciones clínicas para tratar a sus pacientes. Lutronic expande continuamente sus aplicaciones de tratamientos, y el sistema Spectra es el primer láser Nd:YAG con conmutación Q adecuado para el tratamiento de melasma. El sistema Spectra con tecnología avanzada ofrece una ventaja en comparación con otros sistemas de láser y proporciona resultados clínicos mejorados.</p>
-            </div>
-        </div>
+        
     </section>
 
 

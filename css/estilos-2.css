@@ -95,6 +95,17 @@ a {
 .menu-logo{
     background-color: #fff;
 }
+@media (max-width:991px){
+    .menu-logo nav.navbar{
+        position:relative;
+    }
+    .menu-logo nav.navbar ul{
+        position:absolute;
+        top:140%;
+        width:65vh!important;
+        left:-46vh;
+    }
+}
 
 #menu-header ul li a{
     font-size: 1.4rem;
@@ -408,17 +419,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', end
 
 .contacto{
     padding: 80px 0;
+    position:relative;
     background-image: url('../img/barra.jpeg');
     background-position: center;
     background-size: cover;
 }
+.bg-contacto-negro{
+    background-color:#000;
+    opacity:.3;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+
 .contacto .container{
     background-color: rgba(255,255,255,.9);
+    position:relative;
 
 }
 
 .contacto-form .form-group textarea{
     height: 150px;
+    resize:none;
 }
 
 
@@ -471,36 +496,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', end
     background-repeat:no-repeat;
     background-attachment:fixed;
 }
-.bg-tratamiento{
-    background-image:url('../img/tratamientos-bg.jpg');
+.barra-estilo{
     position:relative;
     height:25vh;
     padding:0;
 }
+.bg-tratamiento{
+    background-image:url('../img/tratamientos-bg.jpg');
+    
+}
 .bg-negro{
     background-color:#000;
-    height:25vh;
+    height:100%;
     opacity:.5;
     width:100%;
     position:absolute;
     top:0;
     left:0;
 }
-.bg-tratamiento .titulo-line{
+.barra-estilo .titulo-line{
     position:absolute;
     width:100%;
     top:35%;
     color:var(--color-variante);
     transition:all .4s ease;
 }
-.bg-tratamiento .titulo-line h1{
+.barra-estilo .titulo-line h1{
     font-size:2rem;
     display:inline;
     text-align:center;
     margin-left:20%;
     text-transform:uppercase;
 }
-.bg-tratamiento .titulo-line h1:hover{
+.barra-estilo .titulo-line h1:hover{
     animation-name:borde-bottom;
     animation-duration: 2s;
     animation-direction: normal;
@@ -509,18 +537,100 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab0bf', end
 
 @media (min-width:768px){
     .bg-negro{
+        height:100%;
+    }
+    .barra-estilo{
         height:60vh;
     }
-    .bg-tratamiento{
-        height:60vh;
-    }
-    .bg-tratamiento .titulo-line{
+    .barra-estilo .titulo-line{
         top:30%;
         color:var(--color-variante);
     }
-    .bg-tratamiento .titulo-line h1{
+    .barra-estilo .titulo-line h1{
         font-size:6rem;
         margin-left:30%;
     }
     
+}
+
+.bg-laser{
+    background-image:url('../img/promos-bg.jpg');
+}
+
+.carta-tec{
+    border: 1px solid #888;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,.2);
+}
+.carta-tec h2{
+    margin-bottom: 1.4rem;
+    background-color: var(--color-principal);
+    padding: .5rem 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.barra-nosotros{
+    padding:2rem;
+    height:auto;
+    background-image:url('../img/barra-nosotros.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.barra-nosotros h2{
+    color:#fff;
+    position:relative;
+    font-family: 'Dancing Script', cursive;
+    font-size:1.6rem;
+}
+
+@media (min-width:768px){
+    .barra-nosotros h2{
+        font-size:3.2rem;
+    }
+}
+
+.widget-tratamiento{
+    background-color:var(--color-variante);
+    padding: 2rem 1rem;
+}
+.widget-tratamiento h3{
+    margin-bottom:2rem;
+}
+.consulta-form input,.consulta-form textarea{
+    background-color:#fff;
+    border:none;
+    
+}
+.consulta-form input:focus,.consulta-form textarea:focus{
+    box-shadow:none;
+    resize:none
+}
+.consulta-form input[type="submit"]{
+    background-color:var(--color-secundario);
+    border:1px solid var(--color-secundario);
+    min-width:150px;
+    transition:all .4s ease;
+}
+.consulta-form input[type="submit"]:hover{
+    color:var(--color-secundario);
+    background-color:transparent;
+}
+
+.btn-cat{
+    width:100%;
+    text-align:center;
+    background-color:var(--color-principal);
+    color:#fff;
+    border-radius:0!important;
+}
+.card-cat-body{
+    padding-top:15px;
+    background-color:#fff;
+}
+.card-cat-body h5{
+    padding: 0 1rem;
+    font-size:1.6rem;
+    text-align:center;
 }

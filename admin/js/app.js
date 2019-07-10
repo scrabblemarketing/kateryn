@@ -122,15 +122,11 @@ $(document).ready(function() {
                 var resultado = data;
                 console.log(resultado)
                 if (resultado.respuesta === 'correcto') {
-
                     swal({
                         type: 'success',
                         title: 'Registro',
                         text: resultado.mensaje
                     })
-
-
-
                 } else {
                     swal({
                         type: 'error',
@@ -171,7 +167,7 @@ $(document).ready(function() {
                 },
                 url: 'modelo-' + tipo + '.php',
                 success: function(data) {
-                    var resultado = JSON.parse(data);
+                    var resultado = data;
                     console.log(resultado);
                     if (resultado.respuesta === 'correcto') {
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
@@ -181,7 +177,7 @@ $(document).ready(function() {
                             text: 'Satisfactoriamente'
                         });
                     } else {
-                        console.log('error');
+                        
                         swal({
                             type: 'error',
                             title: 'Ha ocurrido un error',
@@ -194,6 +190,85 @@ $(document).ready(function() {
     });
 
 
+    /** Cargar imagen cuando se seleccione un tratamiento */
+    if(document.querySelector('#imagenPre')){
+
+
+
+        const selectTitulo = document.querySelector('#titulo');
+        const selecImagen = document.querySelector('#imagenPre');
+
+        selectTitulo.addEventListener('change', function(e){
+            const seleccionado = e.target.value;
+            const imagenes = document.querySelector('#imagenPre').parentElement;
+            imagenes.querySelectorAll('img').forEach( imgNone => {
+                imgNone.style.display="none";
+            });
+            
+            const imagen = imagenes.querySelector('img[data-id="'+ seleccionado +'"]');
+            
+            let carga = document.createElement('img');
+            carga.setAttribute('src','img/carga.gif');
+            carga.classList.add('activo')
+            carga.style.width="200px";
+            carga.style.display="block";
+
+            imagenes.insertBefore(carga, document.querySelector('#imagenPre'));
+            setTimeout(() => {
+                
+                document.querySelector('.activo').remove();
+
+                imagen.style.display="block";
+            }, 2000);
+        })
+
+        selecImagen.addEventListener('change', function(){
+            const padre = this.parentElement;
+
+            //Limpio las imagenes
+            padre.querySelectorAll('img').forEach( imgNone => {
+                imgNone.style.display="none";
+            });
+
+
+            const imagenAgregada = selecImagen.files;
+            const navegador = window.URL || window.webkitURL;
+
+            const objectUrl = navegador.createObjectURL(imagenAgregada[0])
+        
+            
+            
+            let carga = document.createElement('img');
+            carga.setAttribute('src','img/carga.gif');
+            carga.classList.add('activo')
+            carga.style.width="200px";
+            carga.style.display="block";
+
+            padre.insertBefore(carga, document.querySelector('#imagenPre'));
+            setTimeout(() => {
+                
+                document.querySelector('.activo').remove();
+                const nuevaImagen = document.createElement('img');
+                nuevaImagen.setAttribute('src', objectUrl);
+                nuevaImagen.style.width="250px";
+                nuevaImagen.style.display="block";
+                padre.insertBefore(nuevaImagen, document.querySelector('#imagenPre'));
+            }, 2000);
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 

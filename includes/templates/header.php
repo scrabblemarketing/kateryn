@@ -14,6 +14,7 @@
     <?php include 'includes/icon.php' ?>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Gothic+A1:400,700|Dancing+Script|Oswald:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -43,7 +44,7 @@
                     </a>
                 </div>
                 <div class="col-4 col-md-9">
-                    <nav class="navbar navbar-expand-lg navbar-light mt-5">
+                    <nav class="navbar navbar-expand-lg navbar-light mt-2 mt-md-5">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-header" aria-controls="menu-header" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -62,7 +63,7 @@
                                     <a href="promociones.php" class="nav-link">Promociones</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.php" class="nav-link">Tecnologías</a>
+                                    <a href="blog.php?title=tecnologia" class="nav-link">Tecnologías</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="contacto.php" class="nav-link">Contacto</a>
